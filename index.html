@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Psicóloga {{NOME}}</title>
+
+  <meta name="description" content="Psicoterapia online e presencial para crianças, adolescentes, adultos e idosos">
+  <meta name="author" content="Psicóloga">
+  <meta property="og:title" content="Psicóloga">
+  <meta property="og:description"
+    content="Psicoterapia online e presencial para crianças, adolescentes, adultos e idosos">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/index-CV3Ori8l.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  
+  <style>
+    /* ESTILOS SIMPLES PARA O JS (Seções 1, 2, 4) */
+    .faq-answer {
+      display: none;
+      padding: 1rem 1.5rem 1.5rem 1.5rem;
+    }
+
+    .faq-answer.open {
+      display: block;
+    }
+
+    .faq-toggle-icon {
+      transition: transform 0.3s ease;
+    }
+
+    .faq-toggle-icon.open {
+      transform: rotate(90deg);
+    }
+    
+    .menu-mobile-nav {
+        /* Garante que o menu mobile aparece */
+        display: none; 
+    }
+    .menu-mobile-nav.open {
+        display: block;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: none; /* Esconde as setas por padrão (mobile) */
+    }
+
+    @media (min-width: 640px) { /* sm: (min-width: 640px) */
+      .swiper-button-prev,
+      .swiper-button-next {
+        display: flex; /* Mostra as setas em telas maiores */
+      }
+    }
+    
+    /* COLE ESTE BLOCO DENTRO DA SUA TAG <style> 
+*/
+
+/* --- Cor das SETAS (Navegação) do Carrossel --- */
+.swiper-button-prev,
+.swiper-button-next {
+    color: hsl(var(--primary)) !important; /* Cor: Primária */
+}
+
+/* --- Cor das BOLINHAS (Paginação) do Carrossel --- */
+
+/* Cor da bolinha INATIVA */
+.swiper-pagination-bullet {
+    background: hsl(var(--muted)) !important; /* Cor: Muted */
+    opacity: 1 !important; /* Garante que ela fique visível */
+}
+
+/* Cor da bolinha ATIVA */
+.swiper-pagination-bullet-active {
+    background: hsl(var(--primary)) !important; /* Cor: Primária */
+}
+
+section > .container > .grid > .lg\:sticky > .bg-card {
+    /* As classes originais eram pt-6 px-6 pb-8 sm:pt-8 sm:px-8 sm:pb-10.
+      Vamos aumentar o padding-bottom (pb).
+    */
+    padding-bottom: 2.5rem !important; /* Aumentado de pb-8 (2rem) para pb-10 (2.5rem) */
+}
+
+@media (min-width: 640px) {
+    section > .container > .grid > .lg\:sticky > .bg-card {
+        padding-bottom: 3rem !important; /* Aumentado de sm:pb-10 (2.5rem) para sm:pb-12 (3rem) */
+    }
+}
+
+*/
+section > .container > .grid > .lg\:sticky > .bg-white > a {
+    /* As classes originais eram py-4 sm:py-5.
+       Vamos aumentar esse valor.
+    */
+    
+    /* Aumenta o preenchimento vertical */
+    padding-top: 1.25rem !important;    /* Equivalente a py-5 */
+    padding-bottom: 1.25rem !important; /* Equivalente a py-5 */
+}
+
+@media (min-width: 640px) {
+    section > .container > .grid > .lg\:sticky > .bg-white > a {
+        /* Aumenta o preenchimento vertical em telas maiores */
+        padding-top: 1.5rem !important;    /* Equivalente a sm:py-6 */
+        padding-bottom: 1.5rem !important; /* Equivalente a sm:py-6 */
+    }
+}
+
+/* COLE ISTO NO LUGAR DO BLOCO ANTIGO */
+#icone-acolher {
+    /* 1. Define SÓ A ALTURA (80px) */
+    height: 7rem !important;  /* equivale a h-20 */
+    
+    /* 2. Deixa a LARGURA ser automática para não amassar */
+    width: auto !important; 
+    
+    /* 3. Força a centralização */
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* ADICIONE ISSO PARA CORRIGIR O GRADIENTE */
+.from-accent {
+  --tw-gradient-from: hsl(var(--accent)) var(--tw-gradient-from-position);
+  --tw-gradient-to: hsl(var(--accent) / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+.to-primary {
+    --tw-gradient-to: hsl(var(--primary)) var(--tw-gradient-to-position);
+}
+
+.bg-card\/95 {
+    background-color: hsl(var(--card) / .95);
+}
+
+/* --- CÓDIGO DO MAPA RESPONSIVO (4:3) --- */
+.map-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  /* Altura padrão para desktop */
+  height: 450px; 
+}
+
+/* Aplica o aspect-ratio 4:3 SÓ em telas mobile (abaixo de 768px) */
+@media (max-width: 767px) {
+  .map-container {
+    height: 0;
+    /* 3 (altura) / 4 (largura) = 0.75 * 100 = 75% */
+    padding-top: 75%; 
+  }
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;  /* Força a largura */
+  height: 100% !important; /* Força a altura */
+  border: 0;
+}
+  </style>
+
+</head>
+
+<body>
+
+  <div class="min-h-screen bg-background">
+    <header class="fixed top-0 left-0 right-0 bg-card/95 backdrop-blur-sm border-b border-border z-50">
+      <div class="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
+        <div class="flex items-center justify-between">
+          <div class="flex-shrink-0">
+            <h1 class="text-xl sm:text-2xl font-serif font-semibold text-foreground">Psicóloga {{NOME}}</h1>
+          </div>
+          <nav class="hidden md:flex items-center space-x-6 lg:space-x-8">
+           <a href="#como-funciona" data-scroll-to class="text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium text-sm lg:text-base">Como Funciona</a>
+           <a href="#sobre-mim" data-scroll-to class="text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium text-sm lg:text-base">Sobre Mim</a>
+           <a href="#quando-pode-ajudar" data-scroll-to class="text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium text-sm lg:text-base">Quando Pode Ajudar</a>
+           <a href="#mapa" data-scroll-to class="text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium text-sm lg:text-base">Localização</a>
+           <a href="#FAQS" data-scroll-to class="text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium text-sm lg:text-base">Perguntas Frequentes</a>
+         <a href="#Instagram" data-scroll-to class="text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium text-sm lg:text-base">Instagram</a>
+          </nav>
+          <button id="menu-toggle-btn" class="md:hidden p-2 text-muted-foreground hover:text-foreground transition-colors"
+            aria-label="Toggle menu">
+            <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="lucide lucide-menu">
+              <line x1="4" x2="20" y1="12" y2="12"></line>
+              <line x1="4" x2="20" y1="6" y2="6"></line>
+              <line x1="4" x2="20" y1="18" y2="18"></line>
+            </svg>
+             <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="lucide lucide-x hidden">
+              <path d="M18 6 6 18"></path>
+              <path d="m6 6 12 12"></path>
+            </svg>
+          </button>
+        </div>
+        
+        <nav id="mobile-menu" class="menu-mobile-nav md:hidden mt-4 pb-4 border-t border-border pt-4">
+           <div class="flex flex-col space-y-3">
+             <a href="#como-funciona" class="text-left text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium py-2">Como Funciona</a>
+            <a href="#sobre-mim" class="text-left text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium py-2">Sobre Mim</a>
+           <a href="#quando-pode-ajudar" class="text-left text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium py-2">Quando Pode Ajudar</a>
+           <a href="#FAQS" class="text-left text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium py-2">Perguntas Frequentes</a>
+           <a href="#mapa" class="text-left text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium py-2"">Localização</a>
+           <a href="#Instagram" class="text-left text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium py-2">Instagram</a>
+             </div>
+           </nav>
+      </div>
+    </header>
+    <main>
+     <section id="servicos" class="pt-20 sm:pt-24 lg:pt-32 pb-12 sm:pb-16 px-4 sm:px-6">
+        <div class="container mx-auto max-w-6xl">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center mb-12 sm:mb-16">
+            <div class="order-1 lg:order-1 flex justify-center lg:justify-start">
+              <div class="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-2xl flex-shrink-0">
+                 <img src="assets/foto1.webp" alt="Foto de perfil da Psicóloga "
+                       class="w-full h-full object-cover">
+                 </div>
+            </div>
+            <div class="order-2 lg:order-2 text-center lg:text-left">
+              <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground mb-2 sm:mb-3 leading-tight">
+                Psicóloga {{NOME}}</h1>
+              
+              <p class="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto lg:mx-0 mb-4 sm:mb-6">
+                CRP - {{CRP}}</p>
+
+              <p class="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto lg:mx-0 leading-relaxed px-4 lg:px-0">
+                Psicoterapia online e presencial para crianças, adolescentes, adultos e idosos.</p>
+
+              <a href="https://wa.me/{{WHATSAPP}}" target="_blank" rel="noopener noreferrer" 
+                 class="inline-flex items-center justify-center sm:justify-start px-6 sm:px-8 py-3 sm:py-4 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-all duration-200 font-medium text-base sm:text-lg shadow-lg hover:shadow-xl hover-scale mt-6 sm:mt-8 w-full sm:w-auto">
+                
+                <svg class="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488">
+                  </path>
+                </svg>
+                Agende um Horário
+              </a>
+
+            </div>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto">
+            <div class="bg-card rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 sm:p-8 hover-scale">
+              <h3 class="text-xl sm:text-2xl font-serif font-semibold text-foreground mb-3 sm:mb-4">Psicoterapia
+                Individual</h3>
+              <p class="text-muted-foreground mb-6 leading-relaxed text-sm sm:text-base">A terapia individual é um espaço seguro
+                onde você pode explorar suas emoções, pensamentos e comportamentos.</p>
+            </div>
+            <div class="bg-card rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 sm:p-8 hover-scale">
+              <h3 class="text-xl sm:text-2xl font-serif font-semibold text-foreground mb-3 sm:mb-4">Atendimento Online e
+                Presencial</h3>
+              <p class="text-muted-foreground mb-6 leading-relaxed text-sm sm:text-base">Ofereço sessões de terapia que se
+                adaptam às suas necessidades e à sua rotina, tanto no formato online quanto presencial.
+            </div>
+          </div>
+        </div>
+      </section>
+          </div>
+        </div>
+      </section>
+     <section id="como-funciona" class="py-12 sm:py-16 px-4 sm:px-6 bg-secondary">
+        <div class="container mx-auto max-w-4xl">
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-center text-foreground mb-12 sm:mb-16 animate-on-scroll">
+            Como Funciona a Terapia</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12 text-center">
+            
+            <div class="flex flex-col items-center">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 bg-card rounded-full flex items-center justify-center shadow-md mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-muted-foreground">
+                  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl sm:text-2xl font-serif font-semibold text-foreground mb-2">Acolhimento</h3>
+              <p class="text-muted-foreground leading-relaxed text-sm sm:text-base">Um espaço seguro e sem julgamentos para você ser ouvido e compartilhar sua história.</p>
+            </div>
+
+            <div class="flex flex-col items-center">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 bg-card rounded-full flex items-center justify-center shadow-md mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-muted-foreground">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+                </svg>
+              </div>
+              <h3 class="text-xl sm:text-2xl font-serif font-semibold text-foreground mb-2">Exploração</h3>
+              <p class="text-muted-foreground leading-relaxed text-sm sm:text-base">Investigamos juntos as causas do sofrimento e os padrões que se repetem.</p>
+            </div>
+
+            <div class="flex flex-col items-center">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 bg-card rounded-full flex items-center justify-center shadow-md mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-muted-foreground">
+                  <path d="M2 22c1.25-.9 2.5-2.4 2.5-4 0-2-1.25-4-2.5-4S0 12 0 14c0 1.6 1.25 3.1 2.5 4zM21.5 14c1.25-.9 2.5-2.4 2.5-4 0-2-1.25-4-2.5-4s-2.5 2-2.5 4c0 1.6 1.25 3.1 2.5 4zM11.5 14c1.25-.9 2.5-2.4 2.5-4 0-2-1.25-4-2.5-4S9 12 9 14c0 1.6 1.25 3.1 2.5 4zM2.5 10S1 4 7 4c6 0 4.5 6 4.5 6M21.5 10S23 4 17 4c-6 0-4.5 6-4.5 6"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl sm:text-2xl font-serif font-semibold text-foreground mb-2">Desenvolvimento</h3>
+              <p class="text-muted-foreground leading-relaxed text-sm sm:text-base">Construímos novas ferramentas e caminhos para uma vida com mais autonomia e bem-estar.</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+       
+      <section id="sobre-mim" class="py-12 sm:py-16 px-4 sm:px-6 bg-background">
+        <div class="container mx-auto max-w-6xl">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+            <div class="order-2 lg:order-1">
+              <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-foreground mb-4 sm:mb-6 animate-on-scroll">Sobre mim
+              </h2>
+              <h3 class="text-lg sm:text-xl font-serif font-medium text-muted-foreground mb-2">{{NOME_COMPLETO}}</h3>
+              <p class="text-muted-foreground mb-4 sm:mb-6 font-medium">CRP - {{CRP}}</p>
+              <div class="space-y-3 sm:space-y-4 text-muted-foreground leading-relaxed mb-6 sm:mb-8 text-sm sm:text-base">
+                <p>{{TEXTO_SOBRE_MIM}}</p>
+              </div><button
+                class="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-all duration-200 font-medium text-base sm:text-lg shadow-lg hover:shadow-xl hover-scale w-full sm:w-auto justify-center sm:justify-start"><svg
+                  class="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488">
+                  </path>
+                </svg>Agende um Horário</button>
+            </div>
+            <div class="order-1 lg:order-2 flex justify-center lg:justify-end mb-8 lg:mb-0">
+              <div class="order-1 lg:order-2 flex justify-center lg:justify-end mb-8 lg:mb-0">
+                <div class="w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden shadow-2xl flex-shrink-0"><img
+                   src="assets/foto2.webp" alt="Psicóloga  em seu consultório"
+                       class="w-full h-full object-cover"></div>
+               </div>
+          </div>
+        </div>
+      </section>
+      <section id="quando-pode-ajudar" class="py-12 sm:py-16 px-4 sm:px-6 bg-secondary">
+        <div class="container mx-auto max-w-7xl">
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-center text-foreground mb-12 sm:mb-16 animate-on-scroll">
+            Quando a Terapia Pode Ajudar</h2>
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-12 items-start">
+            <div class="lg:col-span-2 space-y-6 sm:space-y-8">
+
+              <div class="flex items-start space-x-3 sm:space-x-4 group">
+                <div class="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-card rounded-full flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow duration-200">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 sm:w-7 sm:h-7 text-muted-foreground">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M16 16s-1.5-2-4-2-4 2-4 2"></path>
+                    <line x1="9" x2="9.01" y1="9" y2="9"></line>
+                    <line x1="15" x2="15.01" y1="9" y2="9"></line>
+                  </svg>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <h3 class="text-lg sm:text-xl font-serif font-semibold text-foreground mb-2">Sensação de estar sempre
+                    esgotado</h3>
+                  <p class="text-muted-foreground leading-relaxed text-sm sm:text-base">O cansaço constante - físico ou
+                    emocional – pode indicar que algo merece ser olhado com mais carinho.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-3 sm:space-x-4 group">
+                <div class="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-card rounded-full flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow duration-200">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 sm:w-7 sm:h-7 text-muted-foreground">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                  </svg>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <h3 class="text-lg sm:text-xl font-serif font-semibold text-foreground mb-2">Alterações no sono,
+                    apetite ou energia</h3>
+                  <p class="text-muted-foreground leading-relaxed text-sm sm:text-base">Mudanças persistentes, consistentes e
+                    constantes na sensação de saúde ou dificuldade de relaxar.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-3 sm:space-x-4 group">
+                <div class="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-card rounded-full flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow duration-200">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 sm:w-7 sm:h-7 text-muted-foreground">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="8" x2="16" y1="15" y2="15"></line>
+                    <line x1="9" x2="9.01" y1="9" y2="9"></line>
+                    <line x1="15" x2="15.01" y1="9" y2="9"></line>
+                  </svg>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <h3 class="text-lg sm:text-xl font-serif font-semibold text-foreground mb-2">Perda de prazer ou
+                    interesse no dia a dia</h3>
+                  <p class="text-muted-foreground leading-relaxed text-sm sm:text-base">Quando atividades que antes traziam
+                    alegria não conseguem mais despertar o mesmo interesse.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-3 sm:space-x-4 group">
+                <div class="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-card rounded-full flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow duration-200">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 sm:w-7 sm:h-7 text-muted-foreground">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+    				<path d="m12 13-1-1-1 1-1-1-1 1-1-1-1 1"></path>
+                  </svg>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <h3 class="text-lg sm:text-xl font-serif font-semibold text-foreground mb-2">Dificuldade nos
+                    relacionamentos</h3>
+                  <p class="text-muted-foreground leading-relaxed text-sm sm:text-base">Conflitos, problemas emocionais ou
+                    relacionamentos que não fluem como gostaríamos.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-3 sm:space-x-4 group">
+                <div class="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-card rounded-full flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow duration-200">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 sm:w-7 sm:h-7 text-muted-foreground">
+                    <rect width="20" height="14" x="2" y="7" rx="2" ry="2"></rect>
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                  </svg>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <h3 class="text-lg sm:text-xl font-serif font-semibold text-foreground mb-2">Insatisfação profissional
+                  </h3>
+                  <p class="text-muted-foreground leading-relaxed text-sm sm:text-base">Quando questões do trabalho afetam
+                    significativamente o bem-estar e a qualidade de vida.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:sticky lg:top-32 mt-8 lg:mt-0">
+              <div class="bg-card rounded-2xl shadow-xl p-6 sm:p-8 text-center relative overflow-hidden">
+                <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent to-primary"></div>
+                <div class="mb-6">
+                  <p class="text-base sm:text-lg text-muted-foreground leading-relaxed mb-6">Todos esses momentos merecem ser
+                    ouvidos com atenção, empatia e cuidado.</p>
+                  <p class="text-base sm:text-lg text-muted-foreground leading-relaxed font-medium">A terapia é um espaço seguro
+                    onde suas emoções têm voz e valor.</p>
+                </div>
+                <div class="mb-6">
+                  <div class="text-center mb-8">
+              <img src="assets/acolher.webp" alt="Ícone de acolhimento" id="icone-acolher" class="object-contain">
+            </div>
+                </div>
+                
+                <a href="https://wa.me/5511970563044" target="_blank" rel="noopener noreferrer"
+                  class="w-full inline-block bg-primary text-primary-foreground py-3 sm:py-4 px-4 sm:px-6 rounded-full font-semibold text-base sm:text-lg hover:bg-primary/90 transition-all duration-200 shadow-lg hover:shadow-xl hover-scale">
+                  VAMOS JUNTOS?
+                </a>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+  
+     <section id="FAQS" class="py-12 sm:py-16 px-4 sm:px-6 bg-background">
+        <div class="container mx-auto max-w-4xl">
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-center text-foreground mb-12 sm:mb-16 animate-on-scroll">
+            Perguntas Frequentes</h2>
+          <div class="space-y-4 sm:space-y-6">
+
+            <div class="faq-item bg-card rounded-2xl shadow-lg overflow-hidden transition-all duration-200 hover:shadow-xl">
+              <button class="faq-question w-full p-4 sm:p-6 text-left flex items-center justify-between hover:bg-background transition-colors duration-200">
+                <div class="flex items-center space-x-3 sm:space-x-4 flex-1 min-w-0">
+                  <div class="w-10 h-10 sm:w-12 sm:h-12 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 sm:w-7 sm:h-7 text-muted-foreground">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                  </div>
+                  <h3 class="text-base sm:text-lg md:text-xl font-serif font-semibold text-foreground pr-2 sm:pr-4">
+                    Como funcionam as sessões (duração e frequência)?</h3>
+                </div>
+                <div class="flex-shrink-0 ml-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-toggle-icon w-5 h-5 sm:w-6 sm:h-6 text-muted-foreground">
+                        <path d="m9 18 6-6-6-6"></path>
+                    </svg>
+                </div>
+              </button>
+              <div class="faq-answer px-4 sm:px-6 pb-4 sm:pb-6">
+                <div class="pl-10 sm:pl-16 pr-6 sm:pr-10">
+                  <p class="text-muted-foreground leading-relaxed text-sm sm:text-base">As sessões costumam ser semanais e duram cerca de 50 minutos. Esse ritmo favorece a continuidade e o aprofundamento do processo, podendo ser ajustado conforme sua necessidade.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item bg-card rounded-2xl shadow-lg overflow-hidden transition-all duration-200 hover:shadow-xl">
+              <button class="faq-question w-full p-4 sm:p-6 text-left flex items-center justify-between hover:bg-background transition-colors duration-200">
+                <div class="flex items-center space-x-3 sm:space-x-4 flex-1 min-w-0">
+                  <div class="w-10 h-10 sm:w-12 sm:h-12 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 sm:w-7 sm:h-7 text-muted-foreground">
+                      <path d="M5 22h14"/>
+                      <path d="M5 2h14"/>
+                      <path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22"/>
+                      <path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2"/>
+                    </svg>
+                  </div>
+                  <h3 class="text-base sm:text-lg md:text-xl font-serif font-semibold text-foreground pr-2 sm:pr-4">
+                    Por quanto tempo preciso fazer terapia?</h3>
+                </div>
+                <div class="flex-shrink-0 ml-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-toggle-icon w-5 h-5 sm:w-6 sm:h-6 text-muted-foreground">
+                        <path d="m9 18 6-6-6-6"></path>
+                    </svg>
+                </div>
+              </button>
+              <div class="faq-answer px-4 sm:px-6 pb-4 sm:pb-6">
+                <div class="pl-10 sm:pl-16 pr-6 sm:pr-10">
+                  <p class="text-muted-foreground leading-relaxed text-sm sm:text-base">Não há tempo fixo. A terapia é um espaço de cuidado que respeita seu ritmo e foca nos seus objetivos. O processo termina (ou muda) quando percebermos, em conjunto, que as metas foram atingidas.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="faq-item bg-card rounded-2xl shadow-lg overflow-hidden transition-all duration-200 hover:shadow-xl">
+              <button class="faq-question w-full p-4 sm:p-6 text-left flex items-center justify-between hover:bg-background transition-colors duration-200">
+                <div class="flex items-center space-x-3 sm:space-x-4 flex-1 min-w-0">
+                  <div class="w-10 h-10 sm:w-12 sm:h-12 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 sm:w-7 sm:h-7 text-muted-foreground">
+                      <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/>
+                    </svg>
+                  </div>
+                  <h3 class="text-base sm:text-lg md:text-xl font-serif font-semibold text-foreground pr-2 sm:pr-4">
+                    O que acontece na primeira sessão?</h3>
+                </div>
+                <div class="flex-shrink-0 ml-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-toggle-icon w-5 h-5 sm:w-6 sm:h-6 text-muted-foreground">
+                        <path d="m9 18 6-6-6-6"></path>
+                    </svg>
+                </div>
+              </button>
+              <div class="faq-answer px-4 sm:px-6 pb-4 sm:pb-6">
+                <div class="pl-10 sm:pl-16 pr-6 sm:pr-10">
+                  <p class="text-muted-foreground leading-relaxed text-sm sm:text-base">A primeira sessão é um encontro acolhedor onde você compartilha o que te trouxe à terapia e conversamos sobre como o processo pode seguir. É um espaço seguro para tirar dúvidas e se familiarizar com a terapia</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item bg-card rounded-2xl shadow-lg overflow-hidden transition-all duration-200 hover:shadow-xl">
+              <button class="faq-question w-full p-4 sm:p-6 text-left flex items-center justify-between hover:bg-background transition-colors duration-200">
+                <div class="flex items-center space-x-3 sm:space-x-4 flex-1 min-w-0">
+                  <div class="w-10 h-10 sm:w-12 sm:h-12 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 sm:w-7 sm:h-7 text-muted-foreground">
+                      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                      <circle cx="9" cy="7" r="4"/>
+                      <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                  </div>
+                  <h3 class="text-base sm:text-lg md:text-xl font-serif font-semibold text-foreground pr-2 sm:pr-4">
+                    Qual a diferença entre psicólogo e psiquiatra?</h3>
+                </div>
+                <div class="flex-shrink-0 ml-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-toggle-icon w-5 h-5 sm:w-6 sm:h-6 text-muted-foreground">
+                        <path d="m9 18 6-6-6-6"></path>
+                    </svg>
+                </div>
+              </button>
+              <div class="faq-answer px-4 sm:px-6 pb-4 sm:pb-6">
+                <div class="pl-10 sm:pl-16 pr-6 sm:pr-10">
+                  <p class="text-muted-foreground leading-relaxed text-sm sm:text-base">O psicólogo trabalha com psicoterapia, ajudando você a compreender e lidar com suas emoções, pensamentos e comportamentos, enquanto o psiquiatra pode atuar com medicação quando necessário. Muitas vezes, os dois profissionais colaboram juntos, cada um no seu papel, para oferecer apoio ao seu bem-estar.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item bg-card rounded-2xl shadow-lg overflow-hidden transition-all duration-200 hover:shadow-xl">
+              <button class="faq-question w-full p-4 sm:p-6 text-left flex items-center justify-between hover:bg-background transition-colors duration-200">
+                <div class="flex items-center space-x-3 sm:space-x-4 flex-1 min-w-0">
+                  <div class="w-10 h-10 sm:w-12 sm:h-12 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 sm:w-7 sm:h-7 text-muted-foreground">
+                      <path d="m22 8-6 4 6 4V8Z"></path>
+                      <rect width="14" height="12" x="2" y="6" rx="2" ry="2"></rect>
+                    </svg>
+                  </div>
+                  <h3 class="text-base sm:text-lg md:text-xl font-serif font-semibold text-foreground pr-2 sm:pr-4">
+                    Terapia online funciona da mesma forma que a presencial?</h3>
+                </div>
+                <div class="flex-shrink-0 ml-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-toggle-icon w-5 h-5 sm:w-6 sm:h-6 text-muted-foreground">
+                        <path d="m9 18 6-6-6-6"></path>
+                    </svg>
+                </div>
+              </button>
+              <div class="faq-answer px-4 sm:px-6 pb-4 sm:pb-6">
+                <div class="pl-10 sm:pl-16 pr-6 sm:pr-10">
+                  <p class="text-muted-foreground leading-relaxed text-sm sm:text-base">A terapia online segue os mesmos princípios da presencial, com sigilo, ética e cuidado com seu bem-estar. Você pode participar das sessões de um espaço seguro e confortável, de onde estiver.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item bg-card rounded-2xl shadow-lg overflow-hidden transition-all duration-200 hover:shadow-xl">
+              <button class="faq-question w-full p-4 sm:p-6 text-left flex items-center justify-between hover:bg-background transition-colors duration-200">
+                <div class="flex items-center space-x-3 sm:space-x-4 flex-1 min-w-0">
+                  <div class="w-10 h-10 sm:w-12 sm:h-12 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 sm:w-7 sm:h-7 text-muted-foreground">
+                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                  </div>
+                  <h3 class="text-base sm:text-lg md:text-xl font-serif font-semibold text-foreground pr-2 sm:pr-4">
+                    As sessões são sigilosas?</h3>
+                </div>
+                <div class="flex-shrink-0 ml-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-toggle-icon w-5 h-5 sm:w-6 sm:h-6 text-muted-foreground">
+                        <path d="m9 18 6-6-6-6"></path>
+                    </svg>
+                </div>
+              </button>
+              <div class="faq-answer px-4 sm:px-6 pb-4 sm:pb-6">
+                <div class="pl-10 sm:pl-16 pr-6 sm:pr-10">
+                  <p class="text-muted-foreground leading-relaxed text-sm sm:text-base">Sim, com certeza. O sigilo é a base da terapia. Tudo o que é compartilhado na sessão é estritamente confidencial e protegido pela ética profissional.</p>
+                </div>
+              </div>
+            </div>
+
+            </div>
+        </div>
+      </section>
+            
+      <section id="Instagram" class="py-8 sm:py-12 lg:py-16 px-4 sm:px-6 bg-secondary">
+        <div class="container mx-auto max-w-7xl">
+          <div class="text-center mb-6 sm:mb-8 lg:mb-12">
+            <div class="flex items-center justify-center mb-3 sm:mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-instagram w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 text-muted-foreground mr-2 sm:mr-3">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+              </svg>
+              <h2 class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-serif font-bold text-foreground">Siga no
+                Instagram</h2>
+            </div>
+            <p class="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto animate-on-scroll">Acompanhe conteúdos sobre saúde
+              mental e bem-estar</p>
+          </div>
+          
+          <div class="swiper instagram-carousel relative w-full px-8 sm:px-16 lg:px-24 pb-8">
+            <div class="swiper-wrapper">
+            
+                <div class="swiper-slide">
+                    <a href="https://www.instagram.com/{{INSTAGRAM}}/" target="_blank" rel="noopener noreferrer">
+                    <div class="bg-card rounded-xl sm:rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 h-full">
+                        <div class="aspect-square overflow-hidden rounded-xl sm:rounded-2xl"><img src="assets/carrossel1.webp" alt="Post 1" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"></div>
+                    </div>
+                    </a>
+                </div>
+                
+                <div class="swiper-slide">
+                    <a href="https://www.instagram.com/{{INSTAGRAM}}/" target="_blank" rel="noopener noreferrer">
+                    <div class="bg-card rounded-xl sm:rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 h-full">
+                        <div class="aspect-square overflow-hidden rounded-xl sm:rounded-2xl"><img src="assets/carrossel2.webp" alt="Post 2" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"></div>
+                    </div>
+                    </a>
+                </div>
+                
+                <div class="swiper-slide">
+                    <a href="https://www.instagram.com/{{INSTAGRAM}}/" target="_blank" rel="noopener noreferrer">
+                    <div class="bg-card rounded-xl sm:rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 h-full">
+                        <div class="aspect-square overflow-hidden rounded-xl sm:rounded-2xl"><img src="assets/carrossel3.webp" alt="Post 3" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"></div>
+                    </div>
+                    </a>
+                </div>
+                
+                <div class="swiper-slide">
+                    <a href="https://www.instagram.com/{{INSTAGRAM}}/" target="_blank" rel="noopener noreferrer">
+                    <div class="bg-card rounded-xl sm:rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 h-full">
+                        <div class="aspect-square overflow-hidden rounded-xl sm:rounded-2xl"><img src="assets/carrossel4.webp" alt="Post 4" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"></div>
+                    </div>
+                    </a>
+                </div>
+                
+                <div class="swiper-slide">
+                    <a href="https://www.instagram.com/{{INSTAGRAM}}/" target="_blank" rel="noopener noreferrer">
+                    <div class="bg-card rounded-xl sm:rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 h-full">
+                        <div class="aspect-square overflow-hidden rounded-xl sm:rounded-2xl"><img src="assets/carrossel5.webp" alt="Post 5" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"></div>
+                    </div>
+                    </a>
+                </div>
+                
+                <div class="swiper-slide">
+                    <a href="https://www.instagram.com/{{INSTAGRAM}}/" target="_blank" rel="noopener noreferrer">
+                    <div class="bg-card rounded-xl sm:rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 h-full">
+                        <div class="aspect-square overflow-hidden rounded-xl sm:rounded-2xl"><img src="assets/carrossel6.webp" alt="Post 6" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"></div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+            
+            <button class="swiper-button-prev items-center justify-center z-10 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-card/70 backdrop-blur-sm shadow-md hover:bg-card transition-all duration-200 absolute top-1/2 -translate-y-1/2 left-0 sm:left-2 lg:left-4 xl:left-8 -ml-4 sm:-ml-5 lg:-ml-6 flex after:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 sm:w-6 sm:h-6 text-primary"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button class="swiper-button-next items-center justify-center z-10 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-card/70 backdrop-blur-sm shadow-md hover:bg-card transition-all duration-200 absolute top-1/2 -translate-y-1/2 right-0 sm:right-2 lg:right-4 xl:right-8 -mr-4 sm:-mr-5 lg:-mr-6 flex after:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 sm:w-6 sm:h-6 text-primary"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+            
+            <div class="swiper-pagination relative flex justify-center mt-4 space-x-2"></div>
+            
+          </div>
+
+          <div class="text-center mt-6 sm:mt-8 lg:mt-10"><a href="https://www.instagram.com/{{INSTAGRAM}}/"
+              target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center px-4 sm:px-6 lg:px-8 py-2.5 sm:py-3 lg:py-4 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-all duration-200 font-medium text-sm sm:text-base lg:text-lg shadow-lg hover:shadow-xl hover-scale"><svg
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-instagram w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+              </svg>Seguir @{{INSTAGRAM}}</a></div>
+        </div>
+      </section>
+      
+<section id="mapa" class="py-12 sm:py-16 px-4 sm:px-6 bg-background">
+    <div class="container mx-auto max-w-4xl">
+      
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-center text-foreground mb-12 sm:mb-16 animate-on-scroll">
+        Localização
+      </h2>
+      
+
+        
+      <div class="map-container rounded-2xl shadow-xl">
+        
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d486.52835753498545!2d-43.18603433029957!3d-12.698610899999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x75da9c7221342b3%3A0x25e18250ae8aeb0a!2sPizzaria%20Jata%C3%AD!5e0!3m2!1spt-BR!2sbr!4v1763401326716!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+</section>
+
+    </main>
+   <footer class="bg-primary py-8 sm:py-12 px-4 sm:px-6">
+      <div class="container mx-auto max-w-4xl text-center">
+        
+        <div class="mb-6 sm:mb-8 space-y-2">
+          
+          <h3 class="text-xl sm:text-2xl font-serif font-semibold text-primary-foreground">Psicóloga {{NOME}}</h3>
+          
+          <p class="text-base sm:text-lg text-primary-foreground">{{NOME}} | CRP {{CRP}}</p>
+        
+        </div>
+
+        <p class="text-xs sm:text-sm text-primary-foreground max-w-3xl mx-auto mb-6 sm:mb-8">
+            Este site segue as diretrizes éticas do Conselho Federal de Psicologia (Resolução CFP Nº 09/2024). O atendimento psicológico é um serviço de saúde. Não são compartilhados depoimentos de pacientes nem prometidos resultados.
+        </p>
+        
+        <div class="mt-6 sm:mt-8 text-center">
+          
+          <p class="text-primary-foreground text-sm">© 2025 {{NOME}}. Todos os direitos reservados.</p>
+        
+        </div>
+        
+      </div>
+    </footer>
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/scripts.js"></script>
+  </body>
+
+</html>
